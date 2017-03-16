@@ -5,11 +5,11 @@
 
     public sealed class NetworkManager : PunBehaviour
     {
-        private const string GameNetworkVersion = "0.0.1";
+        private const string NetworkVersion = "0.0.1";
 
         private void OnEnable()
         {
-            PhotonNetwork.ConnectUsingSettings(GameNetworkVersion);
+            PhotonNetwork.ConnectUsingSettings(NetworkVersion);
         }
 
         public override void OnConnectedToMaster()
