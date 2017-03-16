@@ -6,6 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SteamVRLoadScene.unity
-  - enabled: 1
     path: Assets/Scenes/TestScene.unity
+  - enabled: 1
+    path: Assets/Scenes/SimulatorScene.unity
+  - enabled: 1
+    path: Assets/Scenes/SteamVRScene.unity
