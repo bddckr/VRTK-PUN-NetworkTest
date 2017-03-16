@@ -14,7 +14,7 @@ MonoBehaviour:
   AppID: 
   VoiceAppID: 
   ChatAppID: 
-  HostType: 1
+  HostType: 4
   PreferredRegion: 0
   EnabledRegions: -1
   Protocol: 0
