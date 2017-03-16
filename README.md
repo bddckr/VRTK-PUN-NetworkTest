@@ -1,6 +1,8 @@
 # VRTK-PUN-NetworkTest
 A small test project showing how to sync VR CameraRig objects using [Photon's PUN](https://www.photonengine.com/en-US/PUN) and [VRTK](https://github.com/thestonefox/VRTK).
 
+![Screenshot](Screenshot.png)
+
 ## Setup
 
 To be able to use this example project you'll have to set it up first:
