@@ -9,18 +9,19 @@ To be able to use this example project you'll have to set it up first:
 2. In the menu bar click on `Window > Photon Unity Networking > Highlight Server Settings`.
 3. In the `Inspector` window change the `AppId` field to your own one you got from Photon.
 4. Open the scene `TestScene` found in the `Scenes` folder in the `Project` window.
-5. Right click on the scene `SimulatorLoadScene` or `SteamVRLoadScene`, depending on which one you want to use in the Editor. Then choose `Open Scene Additive`.
-6. Hit Play!
+5. Hit Play!
 
 ## Testing locally
 
 To test locally without another computer you can create a standalone build:
 
-1. In the menu bar click on `File > Build Settings...`.
-2. In the `Build Settings` set up the `Scenes In Build` so the first one is the `*LoadScene` you want and the second one is `TestScene`. Remove all other `*LoadScene`s. You can drag and drop the scenes from the `Scenes` folder in the `Project` window.
-3. Click the `Build And Run` button, choose a destination folder and name your executable.
-4. Run the build executable.
-5. Hit Play in the Editor!
+1. Either click on `File > Build & Run` or:
+    1. In the menu bar click on `File > Build Settings...`.
+    2. Click the `Build And Run` button, choose a destination folder and name your executable.
+2. Run the build executable.
+3. Hit Play in the Editor!
+
+This means you now have two copies of the game running at the same time, one standalone and one in the Editor.
 
 ## Unity version info
 
