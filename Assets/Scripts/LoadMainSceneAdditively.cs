@@ -1,15 +1,18 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public sealed class LoadMainSceneAdditively : MonoBehaviour
+﻿namespace NetworkTest
 {
-    public string MainSceneName = "TestScene";
+    using UnityEngine;
+    using UnityEngine.SceneManagement;
 
-    private void OnEnable()
+    public sealed class LoadMainSceneAdditively : MonoBehaviour
     {
-        if (!SceneManager.GetSceneByName(MainSceneName).isLoaded)
+        public string MainSceneName = "TestScene";
+
+        private void OnEnable()
         {
-            SceneManager.LoadScene(MainSceneName, LoadSceneMode.Additive);
+            if (!SceneManager.GetSceneByName(MainSceneName).isLoaded)
+            {
+                SceneManager.LoadScene(MainSceneName, LoadSceneMode.Additive);
+            }
         }
     }
 }

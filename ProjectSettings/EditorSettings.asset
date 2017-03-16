@@ -12,4 +12,4 @@ EditorSettings:
   m_SpritePackerMode: 2
   m_SpritePackerPaddingPower: 1
   m_ProjectGenerationIncludedExtensions: txt;xml;fnt;cd
-  m_ProjectGenerationRootNamespace: 
+  m_ProjectGenerationRootNamespace: NetworkTest

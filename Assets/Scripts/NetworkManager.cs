@@ -1,27 +1,30 @@
-﻿using Photon;
-using UnityEngine;
-
-public sealed class NetworkManager : PunBehaviour
+﻿namespace NetworkTest
 {
-    private const string GameNetworkVersion = "0.0.1";
+    using Photon;
+    using UnityEngine;
 
-    private void OnEnable()
+    public sealed class NetworkManager : PunBehaviour
     {
-        PhotonNetwork.ConnectUsingSettings(GameNetworkVersion);
-    }
+        private const string GameNetworkVersion = "0.0.1";
 
-    public override void OnConnectedToMaster()
-    {
-        PhotonNetwork.JoinRandomRoom();
-    }
+        private void OnEnable()
+        {
+            PhotonNetwork.ConnectUsingSettings(GameNetworkVersion);
+        }
 
-    public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
-    {
-        PhotonNetwork.CreateRoom("Test Room");
-    }
+        public override void OnConnectedToMaster()
+        {
+            PhotonNetwork.JoinRandomRoom();
+        }
 
-    public override void OnJoinedRoom()
-    {
-        PhotonNetwork.Instantiate("VRPlayerNetworkRepresentation", Vector3.zero, Quaternion.identity, 0);
+        public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
+        {
+            PhotonNetwork.CreateRoom("Test Room");
+        }
+
+        public override void OnJoinedRoom()
+        {
+            PhotonNetwork.Instantiate("VRPlayerNetworkRepresentation", Vector3.zero, Quaternion.identity, 0);
+        }
     }
 }
