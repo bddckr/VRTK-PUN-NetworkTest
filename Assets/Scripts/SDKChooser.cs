@@ -57,7 +57,7 @@
                 {
                     AddButton(string.Format("{0}\n(Scene '{1}' not found in build)", prettyName, setup.SceneToLoad), null);
                 }
-                else if (!VRSettings.supportedDevices.Contains(setup.VRDeviceNameToLoad))
+                else if (!string.IsNullOrEmpty(setup.VRDeviceNameToLoad) && !VRSettings.supportedDevices.Contains(setup.VRDeviceNameToLoad))
                 {
                     AddButton(string.Format("{0}\n(VR Device '{1}' not included in build)", prettyName, setup.VRDeviceNameToLoad), null);
                 }
@@ -115,7 +115,10 @@
             SDKManager.headsetSDKInfo = VRTK_SDKManager.InstalledHeadsetSDKInfos.First(predicate);
             SDKManager.controllerSDKInfo = VRTK_SDKManager.InstalledControllerSDKInfos.First(predicate);
 
-            VRSettings.LoadDeviceByName(setup.VRDeviceNameToLoad);
+            if (!string.IsNullOrEmpty(setup.VRDeviceNameToLoad))
+            {
+                VRSettings.LoadDeviceByName(setup.VRDeviceNameToLoad);
+            }
             StartCoroutine(LoadSceneAfterFrameDelay(setup));
         }
 

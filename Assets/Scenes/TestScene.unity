@@ -1497,7 +1497,7 @@ MonoBehaviour:
   Setups:
   - PrettyName: Simulator
     SceneToLoad: SimulatorScene
-    VRDeviceNameToLoad: None
+    VRDeviceNameToLoad: 
   - PrettyName: SteamVR
     SceneToLoad: SteamVRScene
     VRDeviceNameToLoad: OpenVR
@@ -1582,6 +1582,7 @@ MonoBehaviour:
   persistOnLoad: 1
   autoPopulateObjectReferences: 1
   autoManageScriptDefines: 1
+  activeScriptingDefineSymbolsWithoutSDKClasses: []
   actualBoundaries: {fileID: 0}
   actualHeadset: {fileID: 0}
   actualLeftController: {fileID: 0}
