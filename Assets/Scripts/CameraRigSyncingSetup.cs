@@ -30,6 +30,9 @@
                 return;
             }
 
+            // Disable graphical representation.
+            networkRepresentation.transform.GetChild(0).gameObject.SetActive(false);
+
             var transformFollow = networkRepresentation.AddComponent<VRTK_TransformFollow>();
             transformFollow.gameObjectToFollow = VRTK_DeviceFinder.DeviceTransform(device).gameObject;
             transformFollow.followsScale = false;
