@@ -122,9 +122,15 @@
             StartCoroutine(LoadSceneAfterFrameDelay(setup));
         }
 
-        private static IEnumerator LoadSceneAfterFrameDelay(SDKSetup setup)
+        private IEnumerator LoadSceneAfterFrameDelay(SDKSetup setup)
         {
             yield return null;
+
+            if (!string.IsNullOrEmpty(setup.VRDeviceNameToLoad))
+            {
+                VRSettings.enabled = true;
+                GetComponent<Canvas>().enabled = false;
+            }
 
             SceneManager.LoadScene(
                 setup.SceneToLoad,
