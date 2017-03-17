@@ -98,14 +98,12 @@
                     return;
                 }
 
-                SceneManager.sceneLoaded -= onSceneLoaded;
-
                 SDKManager.PopulateObjectReferences(true);
                 SDKManager.gameObject.SetActive(true);
-
-                Destroy(gameObject);
-
                 SDKWasChosen.Invoke();
+
+                SceneManager.sceneLoaded -= onSceneLoaded;
+                Destroy(gameObject);
             };
             SceneManager.sceneLoaded += onSceneLoaded;
 
